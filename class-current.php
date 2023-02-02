@@ -1420,7 +1420,7 @@ class Sublanguage_current extends Sublanguage_core {
 
 				$post_type_obj = get_post_type_object($post->post_type);
 
-				$translated_cpt = ($post_type_obj->rewrite['with_front']) ? $wp_rewrite->front : $wp_rewrite->root;
+				$translated_cpt = isset($post_type_obj->rewrite['with_front']) ? $wp_rewrite->front : $wp_rewrite->root;
 
 				$translated_cpt .= $this->translate_cpt($post->post_type, null, $post->post_type);
 
