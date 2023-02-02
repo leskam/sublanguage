@@ -41,6 +41,7 @@ class Sublanguage_admin extends Sublanguage_rewrite {
 			add_filter('page_link', array($this, 'translate_page_link'), 10, 3);
 			add_filter('post_type_link', array($this, 'translate_custom_post_link'), 10, 3);
 			add_filter('attachment_link', array($this, 'translate_attachment_link'), 10, 2);
+			add_filter('term_link', array($this, 'translate_term_link'), 10, 3);
 
 			add_filter('single_term_title', array($this, 'filter_single_term_title')); // filter term title
 			add_filter('single_cat_title', array($this, 'filter_single_term_title')); // filter term title
